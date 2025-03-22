@@ -1,12 +1,14 @@
+import { Layout } from "./components/Layout";
+import { Home } from "./pages/Home";
 import "./App.css";
+import "./styles/styles.css"
 
 function App() {
-  return (
-    <div>
-      <h1>Digital Library</h1>
-      <h2>Global Penguin Society</h2>
-    </div>
-  );
+    return (
+        <Layout>
+            <Home />
+        </Layout>
+    );
 }
 
 export default App;
