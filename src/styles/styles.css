@@ -1,6 +1,4 @@
-
-
-.header{
+.header {
     width: 100%;
     padding: 16px;
     background-color: #09218b;
@@ -13,14 +11,14 @@
     top: 0;
 }
 
-.header__box{
+.header__box {
     display: flex;
     align-items: flex-end;
     text-decoration: none;
 
 }
 
-.header__box p{
+.header__box p {
     color: white;
     font-size: 16px;
     width: 25px;
@@ -29,28 +27,28 @@
     font-weight: 500;
 }
 
-.header__box p span{
+.header__box p span {
     font-weight: bold;
     font-size: 18px;
 }
 
 .header__img,
-.footer__img{
+.footer__img {
     width: 50px;
     display: inline-block;
 }
 
 .header__img img,
-.footer__img img{
+.footer__img img {
     object-fit: cover;
     width: 100%;
 }
 
-.header__social{
+.header__social {
     text-align: center;
 }
 
-.header__social p{
+.header__social p {
     color: #9AD4DB;
     font-size: 11px;
     font-weight: bold;
@@ -58,29 +56,29 @@
     text-transform: uppercase;
 }
 
-.header__links{
+.header__links {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.header__link{
+.header__link {
     display: inline-block;
     font-size: 22px;
     color: #9AD4DB;
 }
 
-.header__link:hover{
+.header__link:hover {
     color: #fff;
 }
 
-.header__home{
+.header__home {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.header__text{
+.header__text {
     color: #9AD4DB;
     opacity: 0;
     text-transform: uppercase;
@@ -90,11 +88,11 @@
     transition: opacity 0.3s ease;
 }
 
-.header__link--home:hover + .header__text{
+.header__link--home:hover+.header__text {
     opacity: 1;
 }
 
-.carousel{
+.carousel {
     width: 100%;
     height: 500px;
     background-color: bisque;
@@ -112,17 +110,61 @@
 
 
 /* HOME */
-.home__title{
+.home__title {
     text-transform: uppercase;
 }
 
-.home__subtitle{
+.home__subtitle {
     padding: 8px 0px;
     font-size: 18px;
 }
 
-.home__subtitle strong{
+.home__subtitle strong {
     color: #09218b;
+}
+
+/* CAROUSEL */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.carousel-item {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+    width: 200px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
 }
 
 /* FOOTER */
@@ -141,4 +183,3 @@
     color: #fff;
     font-size: 15px;
 }
-
