@@ -45,13 +45,12 @@ export const Carousel = () => {
                                 <img src={pdf.imgLink} alt={pdf.title} className="image" />
                                 <div className="download-wrapper">
                                     <a href={pdf.pdfLink} target="_blank" rel="noopener noreferrer" className="download-link">
-                                        Download <FaFilePdf className="download-icon"/>
+                                        Download <span className="download-icon"><FaFilePdf/></span> 
                                     </a>
                                 </div>
                             </div>
                         </SwiperSlide>
                     ))}
-
                 </Swiper>
             ) : (
                 <Loading/>
