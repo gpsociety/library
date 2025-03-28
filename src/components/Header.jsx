@@ -13,14 +13,13 @@ export const Header = () => {
         <header className="header">
             <a className="header__box" href="https://www.globalpenguinsociety.org">    
                 <div className="header__img" >
-                    <img src="./img/penguin.png" alt="logo gps" />
+                    <img src="./img/gps-logo-library.png" alt="logo gps" />
                 </div>
-                <p> Global Penguin Society <span className="header__enf">Library</span></p>
             </a>
             <nav className="header__nav">
-                <Link to={"https://www.globalpenguinsociety.org"} className="header__link header__link--nav"><RiHome9Line /> <p>GPS</p></Link>
-                <Link to={"/"} className="header__link header__link--nav"><RiBook2Fill/> <p>Library</p></Link>
-                <Link to={"/gallery"} className="header__link header__link--nav"><RiGalleryFill/> <p>Gallery</p></Link>
+                <Link to={"https://www.globalpenguinsociety.org"} className="header__link header__link--nav "><RiHome9Line /> <p className="hover-underline-animation center">GPS</p></Link>
+                <Link to={"/"} className="header__link header__link--nav "><RiBook2Fill/> <p className="hover-underline-animation center">Library</p></Link>
+                <Link to={"/gallery"} className="header__link header__link--nav "><RiGalleryFill/> <p className="hover-underline-animation center">Gallery</p></Link>
             </nav>
             <div className="header__social">
                 <div className="header__links">
