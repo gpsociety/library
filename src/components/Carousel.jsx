@@ -42,7 +42,9 @@ export const Carousel = () => {
                         <SwiperSlide key={pdf.id}>
                             <div className="carousel-item">
                                 <p className="pdf-title">{pdf.title}</p>
-                                <img src={pdf.imgLink} alt={pdf.title} className="image" />
+                                <div className="carousel-img">
+                                    <img src={pdf.imgLink} alt={pdf.title} />
+                                </div>
                                 <div className="download-wrapper">
                                     <a href={pdf.pdfLink} target="_blank" rel="noopener noreferrer" className="download-link">
                                         Download <span className="download-icon"><FaFilePdf/></span> 

@@ -108,22 +108,24 @@
 .main {
     width: 100%;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
+    margin-top: 109px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
 /* HOME */
 
 .home__container {
-    padding-top: 40px;
-    height: 100%;
     background: url("./img/bg-carousel.webp");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     flex-flow: column;
-    gap: 32px;
+    flex: 1;
 }
 
 
@@ -153,8 +155,10 @@
     flex-flow: column wrap;
     text-align: center;
     align-items: center;
-    width: 220px;
+    justify-content: space-between;
+    width: 230px;
     border-radius: 15px;
+    min-height: 440px;
     overflow: hidden;
     box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.5);
     background-color: #f0f0f0;
@@ -163,7 +167,7 @@
 .pdf-title {
     color: #09218b;
     font-weight: bold;
-    padding: 8px 0px;
+    padding: 8px;
 }
 
 .download-wrapper {
@@ -186,16 +190,16 @@
 .download-icon {
     position: absolute;
     display: inline-block;
-    top: 0;
-    transform: translateY(-20%);
-    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -22px;
     color: #ad0b00;
     font-size: 1.6rem;
 }
 
 .swiper {
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 
 .swiper-slide {
@@ -207,10 +211,14 @@
     align-items: center;
 }
 
-.swiper-slide img {
-    display: block;
+.carousel-img {
     width: 100%;
-    height: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.carousel-img img {
+    width: 100%;
     object-fit: cover;
 }
 
@@ -286,4 +294,59 @@
 
 .hover-underline-animation.center:hover::after {
     transform-origin: bottom center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:900px) {
+    .main {
+        margin-top: 170px;
+    }
+
+    .home__container{
+        padding-top: 20px;
+    }
+
+    .home__title{
+        font-size: 1.4rem;
+    }
+
+    .header {
+        display: grid;
+        grid-template-areas:
+            "social"
+            "logo" 
+            "nav";
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+    }
+
+    .header__social {
+        grid-area: social;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__box {
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__nav {
+        grid-area: nav;
+        justify-content: center;
+    }
+
+    .header__social p {
+        display: none;
+    }
+
+    .header__link{
+        font-size: 1rem;
+    }
 }
