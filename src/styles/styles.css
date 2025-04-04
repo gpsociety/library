@@ -119,7 +119,7 @@
 /* HOME */
 
 .home__container {
-    background: url("./img/bg-carousel.webp");
+    background: url('/public/img/bg-carousel.webp');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
