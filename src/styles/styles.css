@@ -46,19 +46,6 @@
     width: 100%;
 }
 
-.header__social {
-    text-align: center;
-}
-
-.header__social p {
-    color: #9AD4DB;
-    font-size: 11px;
-    padding: 4px 0px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
 .header__links {
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +65,6 @@
     align-items: center;
     gap: 2px;
 }
-
 
 .header__link p {
     font-size: 1rem;
@@ -102,7 +88,6 @@
     color: #FF7514;
 }
 
-
 /* MAIN */
 
 .main {
@@ -115,7 +100,6 @@
     justify-content: center;
 }
 
-
 /* HOME */
 
 .home__container {
@@ -127,7 +111,6 @@
     flex-flow: column;
     flex: 1;
 }
-
 
 .home__title {
     text-transform: uppercase;
@@ -228,15 +211,69 @@
     width: 100%;
     padding: 24px 8px;
     background-color: #09218b;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     text-align: center;
-
 }
 
 .footer p {
-    padding: 4px;
-    font-weight: 500;
     color: #fff;
-    font-size: 15px;
+    padding: 4px 0px;
+}
+
+.footer__links {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.footer__link {
+    display: flex;
+    color: #9AD4DB;
+    text-decoration: none;
+    font-size: 24px;
+    transition: all 300ms ease-in-out;
+}
+
+/* SWITCHER */
+.language-switcher {
+    width: 50px;
+    height: 26px;
+    background-color: #ccc;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher.active{
+    background-color: #474bff;
+}
+
+.pill {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: left 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.pill.active {
+    left: 25px;
+}
+
+.label {
+    user-select: none;
 }
 
 
@@ -302,11 +339,12 @@
         margin-top: 170px;
     }
 
-    .home__container{
-        padding-top: 20px;
+    .home__container {
+        padding: 32px 8px 0px 8px ;
+
     }
 
-    .home__title{
+    .home__title {
         font-size: 1.4rem;
     }
 
@@ -314,7 +352,7 @@
         display: grid;
         grid-template-areas:
             "social"
-            "logo" 
+            "logo"
             "nav";
         grid-template-columns: 1fr;
         align-items: center;
@@ -323,11 +361,8 @@
 
     }
 
-    .header__social {
+    .language-switcher {
         grid-area: social;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .header__box {
@@ -342,11 +377,7 @@
         justify-content: center;
     }
 
-    .header__social p {
-        display: none;
-    }
-
-    .header__link{
+    .header__link {
         font-size: 1rem;
     }
 }
