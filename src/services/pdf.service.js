@@ -16,6 +16,8 @@ export const getPdfs = async (lang) => {
         console.error('Error obteniendo los PDFs:', error);
         return [];
     }
+    
+    console.log(data)
 
     return data.map((item) => ({
         id: item.id,
@@ -28,12 +30,3 @@ export const getPdfs = async (lang) => {
         pdf.imgLink && pdf.imgLink !== 'no'
     );
 };
-
-// export const getPdfs = async () => {
-//     let { data, error } = await supabase.from('pdfs').select('*');
-//     if (error) {
-//         console.error('Error obteniendo los PDFs:', error);
-//         return [];
-//     }
-//     return data;
-// };

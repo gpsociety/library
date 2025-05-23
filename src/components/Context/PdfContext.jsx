@@ -2,7 +2,6 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getPdfs } from '../../services/pdf.service';
 
-
 const PDFContext = createContext();
 
 export const PDFProvider = ({ children }) => {
@@ -13,12 +12,9 @@ export const PDFProvider = ({ children }) => {
     useEffect(() => {
         const lang = i18n.language;
         if (pdfsCache[lang]) {
-            console.log(`[PDFContext] Usando PDFs en cache para idioma: ${lang}`);
             setCurrentPdfs(pdfsCache[lang]);
             return;
         }
-
-        console.log(`[PDFContext] Haciendo fetch de PDFs para idioma: ${lang}`);
         getPdfs(lang).then((pdfs) => {
             setPdfsCache((prev) => ({ ...prev, [lang]: pdfs }));
             setCurrentPdfs(pdfs);

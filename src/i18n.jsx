@@ -16,7 +16,11 @@ i18n.use(initReactI18next).init({
                 gllB: 'now on your phone!',
                 gllP1: "Every month, we'll release 4K HD wallpaper celebrating penguins, Free download and use!",
                 footer: 'Made to protect the environment.',
-                footerP: 'Follow Us'
+                footerP: 'Follow Us',
+                comingSoon: 'Coming Soon!',
+                may: 'May',
+                june: 'June',
+                july: ' July'
             } 
         },
         es: { 
@@ -32,7 +36,11 @@ i18n.use(initReactI18next).init({
                 gllB: 'ahora en tu teléfono!',
                 gllP1: 'Cada mes, publicaremos un fondo de pantalla 4K HD dedicado a los pingüinos. ¡Descárgalo y úsalo gratis!',
                 footer: 'Beneficiamos a los pingüinos, a la gente y al Planeta.',
-                footerP: 'Síguenos'
+                footerP: 'Síguenos',
+                comingSoon: 'Próximamente!',
+                may: 'Mayo',
+                june: 'Junio',
+                july: 'Julio'
             } 
         },
     },
